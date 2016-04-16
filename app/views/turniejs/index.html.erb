@@ -1,0 +1,16 @@
+<h1 id="nazwa">Baza turniejow</h1>
+<p> Tutaj są informacje o turniejach.</p>
+
+<div id="wpis-turniejowy">
+<ul>
+  <% for entry in @turnieje %>
+    <li>
+      <h2><%= entry.title %></h2>
+      <p class="date"><%= entry.date %></p>
+      <p><%= entry.contents %></p>
+      <p><%= link_to("Edit this turniej", edit_turniej_path(entry)) %></p>
+      <p><%= link_to("Sprawdź komentarze", turniej_path(entry)) %></p>
+    </li>
+    <% end %>
+  </ul>
+</div>
